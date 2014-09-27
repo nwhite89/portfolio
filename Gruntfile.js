@@ -24,6 +24,12 @@ module.exports = function (grunt) {
             html: {
                 src: 'src/html/index.html',
                 dest: 'www/index.html'
+            },
+            api: {
+                expand: true,
+                flatten: true,
+                dest: 'www/api/',
+                src: 'src/**/*.json'
             }
         },
         jscs: {
@@ -57,6 +63,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'copy:html',
+        'copy:api',
         'concat:dev'
     ]);
 
