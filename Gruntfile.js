@@ -10,6 +10,12 @@ module.exports = function (grunt) {
                 }
             }
         },
+        copy: {
+            html: {
+                src: 'src/html/index.html',
+                dest: 'www/index.html'
+            }
+        },
         jscs: {
             options: {
                 config: '.jscsrc'
