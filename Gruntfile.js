@@ -2,6 +2,14 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.initConfig({
+        connect: {
+            server: {
+                options: {
+                    port: 8080,
+                    base: 'www'
+                }
+            }
+        },
         jscs: {
             options: {
                 config: '.jscsrc'
@@ -29,6 +37,10 @@ module.exports = function (grunt) {
     grunt.registerTask('lint', [
         'jshint:src',
         'jscs:src'
+    ]);
+
+    grunt.registerTask('serve', [
+        'connect:server:keepalive'
     ]);
 
     // Test task, to run tests for the project
