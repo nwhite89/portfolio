@@ -1,0 +1,22 @@
+{
+  "name": "github-portfolio",
+  "version": "0.0.1",
+  "description": "My portfolio on GitHub pages",
+  "author": "Nick White <nickswhite89@gmail.co.uk>",
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    ".jscsrc",
+    ".jshintrc",
+    ".travis.yml",
+    "Gruntfile.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nwhite89/portfolio.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+  }
+}
