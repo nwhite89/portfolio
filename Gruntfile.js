@@ -45,10 +45,21 @@ module.exports = function (grunt) {
         'jscs:src'
     ]);
 
+    grunt.registerTask('build', [
+        'copy:html'
+    ]);
+
     grunt.registerTask('serve', [
+        'build',
         'connect:server:keepalive'
     ]);
 
     // Test task, to run tests for the project
     grunt.registerTask('test', ['lint']);
+
+    // Grunt default taske (run linting first then set up serve)
+    grunt.registerTask('default', [
+        'lint',
+        'serve'
+    ]);
 };
