@@ -1,0 +1,26 @@
+{
+  "name": "github-portfolio",
+  "version": "0.0.1",
+  "description": "My portfolio on GitHub pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nwhite89/portfolio.git"
+  },
+  "author": "Nick White <nickswhite89@gmail.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nwhite89/portfolio/issues"
+  },
+  "homepage": "https://github.com/nwhite89/portfolio",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-jscs": "~0.7.1",
+    "load-grunt-tasks": "~0.6.0"
+  }
+}
