@@ -1,5 +1,6 @@
 // Setup project
 angular
     .module('app', [
-        'app.directives'
+        'app.directives',
+        'app.resources'
     ]);
