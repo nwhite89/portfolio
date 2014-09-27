@@ -2,6 +2,16 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.initConfig({
+        concat: {
+            dev: {
+                src: [
+                    'src/js/*.js',
+                    'src/js/**/*setup.js',
+                    'src/**/*.js'
+                ],
+                dest: 'www/app.js'
+            }
+        },
         connect: {
             server: {
                 options: {
@@ -46,7 +56,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
-        'copy:html'
+        'copy:html',
+        'concat:dev'
     ]);
 
     grunt.registerTask('serve', [

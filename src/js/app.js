@@ -1,3 +1,5 @@
 // Setup project
 angular
-    .module('app', []);
+    .module('app', [
+        'app.directives'
+    ]);
