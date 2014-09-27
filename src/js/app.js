@@ -2,5 +2,6 @@
 angular
     .module('app', [
         'app.directives',
-        'app.resources'
+        'app.resources',
+        'app.controllers'
     ]);
