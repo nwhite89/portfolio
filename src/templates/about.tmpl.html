@@ -1,0 +1,59 @@
+<section class="about white" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 me">
+                <h1>A bit about me</h1>
+                <h3>Nick White : Front-end Developer : London, UK</h3>
+
+                <p>
+                    Front-end developer from London, with a First Class (Hons) in Business Information Systems from the University of Portsmouth.
+                </p>
+
+                <p>
+                    I am currently working at <a href="http://www.rockabox.com" title="Rockabox Ltd." target="_blank">Rockabox</a>, which is a content media agency within the product development team, as a developer and product owner of new formats.
+                </p>
+
+                <p>
+                    As a developer I work with Angular JS, Underscore, Compass, Grunt, CSS3, HTML5, NodeJs and Git. To build the new RBX distribution platform, in which to create, serve and monitor ads. As well as working on creating brand new formats such as the <a href="http://rockabox.com/products/#section-products-shutters" title="Shutters" target="_blank">Shutters™</a> video content format.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <div class="icon">
+                    <i class="fa fa-code"></i>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="skills">
+                            <li>JavaScript</li>
+                            <li>Angular JS</li>
+                            <li>jQuery</li>
+                            <li>Twitter Bootstrap</li>
+                            <li>SASS</li>
+                            <li>LESS</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="skills">
+                            <li>Git</li>
+                            <li>NodeJS</li>
+                            <li>Compass</li>
+                            <li>Grunt</li>
+                            <li>Bower</li>
+                            <li>PHP</li>
+                            <li>Laravel 4</li>
+                            <li>CodeIgniter</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <span ng-repeat="item in instagram">
+                    <img ng-src="{{ item.thumbnail_url }}" class="instagram-image" width="150" height="150">
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
