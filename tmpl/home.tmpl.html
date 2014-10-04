@@ -1,0 +1,16 @@
+<section class="home red" id="home">
+    <header>
+        <h1>Nick White</h1>
+        <h2>Front-end Developer</h2>
+        <p>
+            Developer <a href="workingAt.title" target="_blank">{{ workingAt.text }}</a> working with
+            <a
+                ng-repeat="with in workingWith"
+                target="_blank"
+                title="{{ with.title }}"
+                ng-href="{{ with.link }}">
+                {{ with.text }}{{ $last ? '' : ', '}}
+            </a>
+        </p>
+    </header>
+</section>
