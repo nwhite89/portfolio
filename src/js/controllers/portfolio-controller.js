@@ -2,11 +2,7 @@ angular
     .module('app.controllers')
     .controller('portfolioCtrl', function ($scope, $sce, projectResource, lodash) {
         $scope.portfolio = true;
-        $scope.projects = {};
-
-        projectResource.query(function (response) {
-            $scope.projects = response;
-        });
+        $scope.projects = projectResource.query();
 
         $scope.showPortfolio = function (pid) {
             $scope.portfolio = false;
