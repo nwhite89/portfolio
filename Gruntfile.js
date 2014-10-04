@@ -30,6 +30,12 @@ module.exports = function (grunt) {
                 flatten: true,
                 dest: 'www/api/',
                 src: 'src/**/*.json'
+            },
+            templates: {
+                src: 'src/templates/**/*.tmpl.html',
+                dest: 'www/tmpl/',
+                flatten: true,
+                expand: true
             }
         },
         jscs: {
@@ -46,8 +52,11 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             },
             src: [
-                '**/*.json',
                 '**/*.js',
+                '!node_modules/**'
+            ],
+            json: [
+                '**/*.json',
                 '!node_modules/**'
             ]
         }
@@ -58,12 +67,14 @@ module.exports = function (grunt) {
     // Set's up linting task
     grunt.registerTask('lint', [
         'jshint:src',
+        'jshint:json',
         'jscs:src'
     ]);
 
     grunt.registerTask('build', [
         'copy:html',
         'copy:api',
+        'copy:templates',
         'concat:dev'
     ]);
 

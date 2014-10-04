@@ -4,6 +4,6 @@ angular
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'templates/portfolio.tmpl.html'
+            'templateUrl': 'tmpl/portfolio.tmpl.html'
         };
     });
