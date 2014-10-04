@@ -5,6 +5,10 @@ module.exports = function (grunt) {
         concat: {
             dev: {
                 src: [
+                    'vendor/angular/angular.js',
+                    'vendor/angular-resource/angular-resource.js',
+                    'vendor/angular-sanitize/angular-sanitize.js',
+                    'vendor/ng-lodash/build/ng-lodash.js',
                     'src/js/*.js',
                     'src/js/**/*-setup.js',
                     'src/**/*.js'
@@ -30,26 +34,72 @@ module.exports = function (grunt) {
                 flatten: true,
                 dest: 'www/api/',
                 src: 'src/**/*.json'
+            },
+            templates: {
+                src: 'src/templates/**/*.tmpl.html',
+                dest: 'www/tmpl/',
+                flatten: true,
+                expand: true
+            }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/',
+                    src: ['img/projects/**/*.{png,jpg,gif}'],
+                    dest: 'www/'
+                }]
             }
         },
         jscs: {
             options: {
                 config: '.jscsrc'
             },
-            src: [
-                '**/*.js',
-                '!node_modules/**'
-            ]
+            src: '<%= jshint.src %>'
         },
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
             },
             src: [
-                '**/*.json',
                 '**/*.js',
+                '!vendor/**',
+                '!node_modules/**',
+                '!www/**'
+            ],
+            json: [
+                '**/*.json',
+                '!vendor/**',
                 '!node_modules/**'
             ]
+        },
+        sass: {
+            options: {
+                includePaths: [
+                    'vendor/bootstrap-sass-official/assets/stylesheets'
+                ].concat(require('node-bourbon').includePaths)
+            },
+            dist: {
+                files: {
+                    'www/main.css': 'src/sass/template.scss'
+                }
+            }
+        },
+        watch: {
+            dev: {
+                files: [
+                    'src/**/*.js',
+                    'src/**/*.scss',
+                    'src/**/*.html'
+                ],
+                tasks: [
+                    'build'
+                ],
+                options: {
+                    livereload: true
+                }
+            }
         }
     });
 
@@ -58,18 +108,26 @@ module.exports = function (grunt) {
     // Set's up linting task
     grunt.registerTask('lint', [
         'jshint:src',
+        'jshint:json',
         'jscs:src'
     ]);
 
     grunt.registerTask('build', [
         'copy:html',
         'copy:api',
-        'concat:dev'
+        'copy:templates',
+        'concat:dev',
+        'sass:dist'
     ]);
 
     grunt.registerTask('serve', [
         'build',
-        'connect:server:keepalive'
+        'connect:server'
+    ]);
+
+    grunt.registerTask('dev', [
+        'serve',
+        'watch'
     ]);
 
     // Test task, to run tests for the project
@@ -78,6 +136,6 @@ module.exports = function (grunt) {
     // Grunt default taske (run linting first then set up serve)
     grunt.registerTask('default', [
         'lint',
-        'serve'
+        'dev'
     ]);
 };

@@ -1,10 +1,10 @@
 // Setup project
 angular
     .module('app.directives')
-    .directive('nav-block', function () {
+    .directive('navBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl':  'templates/nav.tmpl.html'
+            'templateUrl':  'tmpl/nav.tmpl.html'
         };
     });

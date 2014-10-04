@@ -1,2 +1,4 @@
 angular
-    .module('app.resources', []);
+    .module('app.resources', [
+        'ngResource'
+    ]);

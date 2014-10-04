@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Node JS",
+        "text": "Node JS",
+        "link": "http://nodejs.org"
+    },
+    {
+        "title": "Angular JS Framework by Google",
+        "text": "Angular JS",
+        "link": "https://angularjs.org"
+    },
+    {
+        "title": "Lo-dash",
+        "text": "Lo-dash",
+        "link": "http://lodash.com"
+    },
+    {
+        "title": "SASS",
+        "text": "Syntactically Awesome StyleSheets",
+        "link": "http://sass-lang.com"
+    },
+    {
+        "title": "Bower Package Manager",
+        "text": "Bower",
+        "link": "http://bower.io"
+    },
+    {
+        "title": "Grunt JavaScript task runner",
+        "text": "Grunt",
+        "link": "http://gruntjs.com"
+    }
+]

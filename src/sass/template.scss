@@ -1,0 +1,444 @@
+$white-color: #fef6e9;
+$red-color: #e64141;
+$blue-color: #1591ac;
+$green-color: #65beb4;
+$black-color: #2f2f2f;
+$font-color: #343642;
+$font-roboto: 'Roboto', sans-serif;
+$font-dafoe: 'Mr Dafoe', cursive;
+
+@import "imports/custom-mixins";
+@import "imports/bootstrap";
+/* @import "compass/css3";
+@import "compass/utilities"; */
+/* @include font-face("Ballpark Wiener", font-files("ballpark/ballw___-webfont.ttf", "ballpark/ballw___-webfont.woff")); */
+
+
+body {
+    font-family: $font-roboto;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.5;
+
+    h1 {
+        font-family: $font-dafoe;
+        margin-bottom: 20px;
+        font-size: 85px;
+        font-weight: 100;
+        text-align: center;
+        line-height: 1.25em;
+    }
+
+    h2 {
+        font-family: $font-dafoe;
+        font-size: 50px;
+    }
+
+    h3 {
+        font-family: $font-dafoe;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    section {
+        a {
+            text-decoration: none;
+            border-bottom: 1px #fff dotted;
+            @include transition-property(border-color);
+            @include transition-duration(0.2s);
+            @include transition-timing-function(ease-in);
+
+            &:hover {
+                border-color: rgba(#fff, 0);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+nav {
+
+    &.navbar-inverse {
+        .navbar-nav {
+            > li {
+                a {
+                    &:hover {
+
+                        &.about {
+                            background-color: $white-color;
+                            color: $red-color;
+                        }
+
+                        &.portfolio {
+                            background-color: $blue-color;
+                        }
+
+                        &.getintouch {
+                            background-color: $green-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-brand {
+        font-family: $font-dafoe;
+        font-size: 45px;
+
+        &.hide {
+            display: block;
+        }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .logo {
+        @include border-bottom-radius(15px);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        display: block;
+        border: 5px solid $black-color;
+        background: transparent url('https://s.gravatar.com/avatar/282f092daba9c0075331450e55149ef4?s=150') left top no-repeat;
+    }
+
+    a {
+        text-transform: capitalize;
+    }
+}
+
+section {
+    padding: 50px 0;
+
+    &.red, &.blue, &.green {
+        color: $white-color;
+        background: $red-color no-repeat top center;
+
+        a {
+            color: $white-color;
+            border-color: rgba($white-color, 0.5);
+
+            &:hover {
+                border-color: rgba(#fff, 0);
+            }
+        }
+        #{headers(all)} {
+            color: $white-color;
+        }
+    }
+
+    &.white {
+        background: $white-color no-repeat top center;
+
+        a {
+            color: $red-color;
+            border-color: rgba($red-color, 0.5);
+
+            &:hover {
+                border-color: rgba(#fff, 0);
+            }
+        }
+
+        h1, h2, h3, h4, h5 {
+            @include text-shadow(rgba($white-color, 0.2) 1px 1px 0, rgba($white-color, 0.2) 2px 2px 0, rgba($white-color, 0.2) 3px 3px 0);
+
+            color: $red-color;
+        }
+
+        .icon {
+            color: $red-color;
+
+            i {
+                @include text-shadow(rgba($white-color, 0.2) 1px 1px 0, rgba($white-color, 0.2) 2px 2px 0, rgba($white-color, 0.2) 3px 3px 0);
+            }
+
+        }
+    }
+
+    &.green {
+        background: $green-color no-repeat top center;
+    }
+
+    &.blue {
+        background: $blue-color no-repeat top center;
+    }
+
+    p {
+        margin-bottom: 20px;
+
+        &.center {
+            text-align: center;
+        }
+    }
+
+    &.main {
+        padding: 60px 40px;
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+
+    &.home {
+        -skrollr-animation-name:animation1;
+
+        position: relative;
+        top: 0;
+        left: 0;
+
+        padding: 14em 0 12em 0;
+        width: 100%;
+        height: auto;
+        color: $white-color;
+        margin: 0;
+
+        header {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+
+            h1 {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 30px;
+                font-style: 25px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &.about {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+        color: $font-color;
+        margin: 0;
+        text-align: center;
+
+        .me {
+            text-align: justify;
+        }
+
+        .icon {
+            font-size: 60px;
+            padding-bottom: 25px;
+
+            i {
+                line-height: 120px;
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0 0 40px;
+
+            &.skills {
+                list-style: none;
+            }
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        span {
+            display: inline-block;
+            margin-right: 10px;
+
+            .instagram-image {
+                /* @include filter(saturate(0%) blur(0px)); */
+
+
+                &:hover {
+                    /* @include filter(none); */
+                    -moz-transition: -moz-filter 2s;
+                    -ms-transition: -ms-filter 2s;
+                    -o-transition: -o-filter 2s;
+                    transition: filter 2s;
+                    -webkit-transition: -webkit-filter 2s;
+                }
+            }
+
+        }
+    }
+
+    &.portfolio {
+        text-align: center;
+
+        .row {
+            position: relative;
+        }
+
+        .work {
+            $circle-size: 200px;
+
+            @include border-radius($circle-size);
+            @include text-shadow(rgba($white-color, 0.25) 0 -1px 0);
+            @include box-shadow(rgba(50, 50, 50, 0.4) 0px 6px 20px 0px);
+
+
+            width: $circle-size;
+            height: $circle-size;
+            line-height: $circle-size;
+            font-size: 15px;
+            margin: auto auto 40px auto;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            letter-spacing: .1em;
+
+            border: 1px solid rgba($white-color, 0.5);
+            background-color: $green-color;
+            color: $white-color;
+
+            &:hover {
+                p {
+                    display: none;
+                }
+            }
+
+            p {
+                position: absolute;
+                width: $circle-size;
+                height: $circle-size;
+            }
+
+            .image {
+                @include border-radius($circle-size);
+                @include opacity(0.07);
+
+                @include transition-property(opacity);
+                @include transition-duration(0.5s);
+                @include transition-timing-function(ease-in);
+
+                position: absolute;
+                width: $circle-size;
+                height: $circle-size;
+
+                &:hover {
+                    @include opacity(1);
+                }
+            }
+        }
+
+        .project-image {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .aboutProject {
+            p {
+                text-align: justify;
+            }
+        }
+
+        .close {
+            @include opacity(1);
+
+            font-size: 50px;
+            position: absolute;
+            right: 0;
+
+            &:hover {
+                @include opacity(0.5);
+            }
+
+            a {
+                border: none;
+            }
+        }
+    }
+
+    &.get-in-touch {
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: $white-color;
+
+            .fa-inverse {
+                color: $green-color;
+            }
+
+            &:hover {
+                color: $blue-color;
+
+                .fa-inverse {
+                    color: $white-color;
+                }
+            }
+        }
+
+        .btn-default {
+            &:hover {
+                background: $blue-color;
+                color: $white-color;
+            }
+        }
+
+        ul {
+            width: 100%;
+            margin: 0 auto;
+
+            &.icons {
+                padding: 0;
+                list-style-type: none;
+                text-align: center;
+
+                li {
+                    display: inline;
+                }
+
+                a {
+                    border: none;
+
+                    i {
+                        @include transition-property(color);
+                        @include transition-duration(0.2s);
+                        @include transition-timing-function(ease-in);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@-skrollr-keyframes animation1 {
+    top {
+        background: black;
+        opacity: 0.5;
+    }
+
+    bottom {
+
+        background: blue;
+    }
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    color: $white-color;
+    background-color: $black-color;
+}

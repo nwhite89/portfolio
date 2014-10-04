@@ -1,9 +1,10 @@
 angular
     .module('app.directives')
-    .directive('home-block', function () {
+    .directive('homeBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'templates/home.tmpl.html'
+            'templateUrl': 'tmpl/home.tmpl.html',
+            'controller': 'homeCtrl'
         };
     });

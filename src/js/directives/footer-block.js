@@ -1,9 +1,10 @@
 angular
     .module('app.directives')
-    .directive('footerblock', function () {
+    .directive('footerBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'templates/footer.tmpl.html'
+            'templateUrl': 'tmpl/footer.tmpl.html',
+            'controller': 'footerCtrl'
         };
     });

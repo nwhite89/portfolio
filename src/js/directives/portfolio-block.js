@@ -1,9 +1,10 @@
 angular
     .module('app.directives')
-    .directive('portfolio-block', function () {
+    .directive('portfolioBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'templates/portfolio.tmpl.html'
+            'templateUrl': 'tmpl/portfolio.tmpl.html',
+            'controller': 'portfolioCtrl'
         };
     });

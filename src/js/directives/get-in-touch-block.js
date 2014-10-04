@@ -1,9 +1,9 @@
 angular
     .module('app.directives')
-    .directive('getintouchblock', function () {
+    .directive('getInTouchBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'templates/get-in-touch.tmpl.html'
+            'templateUrl': 'tmpl/get-in-touch.tmpl.html'
         };
     });
