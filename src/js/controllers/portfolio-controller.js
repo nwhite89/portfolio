@@ -13,7 +13,7 @@ angular
             $scope.portfolio = false;
             $scope.project = true;
 
-            $scope.showProject = _.findWhere($scope.projects, {
+            $scope.showProject = lodash.findWhere($scope.projects, {
                 id: pid
             });
 
