@@ -61,9 +61,14 @@ module.exports = function (grunt) {
             ]
         },
         sass: {
+            options: {
+                includePaths: [
+                    'vendor/bootstrap-sass-official/assets/stylesheets'
+                ].concat(require('bourbon').includePaths)
+            },
             dist: {
                 files: {
-                    'main.css': 'main.scss'
+                    'www/main.css': 'src/sass/template.scss'
                 }
             }
         }
@@ -82,7 +87,8 @@ module.exports = function (grunt) {
         'copy:html',
         'copy:api',
         'copy:templates',
-        'concat:dev'
+        'concat:dev',
+        'sass:dist'
     ]);
 
     grunt.registerTask('serve', [
