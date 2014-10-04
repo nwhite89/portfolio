@@ -21,6 +21,7 @@ body {
     line-height: 1.5;
 
     h1 {
+        font-family: $font-dafoe;
         margin-bottom: 20px;
         font-size: 85px;
         font-weight: 100;
@@ -29,16 +30,14 @@ body {
     }
 
     h2 {
+        font-family: $font-dafoe;
         font-size: 50px;
     }
 
     h3 {
+        font-family: $font-dafoe;
         font-size: 35px;
         text-align: center;
-    }
-
-    #{headers(all)} {
-        font-family: $font-dafoe;
     }
 
     section {
@@ -247,7 +246,7 @@ section {
             margin: 0 0 40px;
 
             &.skills {
-                /* @include no-bullets(); */
+                list-style: none;
             }
 
             li {

@@ -46,11 +46,7 @@ module.exports = function (grunt) {
             options: {
                 config: '.jscsrc'
             },
-            src: [
-                '**/*.js',
-                '!vendor/**',
-                '!node_modules/**'
-            ]
+            src: '<%= jshint.src %>'
         },
         jshint: {
             options: {
@@ -59,7 +55,8 @@ module.exports = function (grunt) {
             src: [
                 '**/*.js',
                 '!vendor/**',
-                '!node_modules/**'
+                '!node_modules/**',
+                '!www/**'
             ],
             json: [
                 '**/*.json',
@@ -83,11 +80,15 @@ module.exports = function (grunt) {
             dev: {
                 files: [
                     'src/**/*.js',
+                    'src/**/*.scss',
                     'src/**/*.html'
                 ],
                 tasks: [
                     'build'
-                ]
+                ],
+                options: {
+                    livereload: true
+                }
             }
         }
     });
