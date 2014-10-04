@@ -1,6 +1,6 @@
 angular
     .module('app.controllers')
-    .controller('portfolio', function ($scope, $sce, projectResource, lodash) {
+    .controller('portfolioCtrl', function ($scope, $sce, projectResource, lodash) {
         $scope.portfolio = true;
         $scope.projects = {};
 

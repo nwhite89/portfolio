@@ -1,6 +1,6 @@
 angular
     .module('app.controllers')
-    .controller('about', function ($scope, instagramResource) {
+    .controller('aboutCtrl', function ($scope, instagramResource) {
         $scope.instagram = {};
 
         instagramResource.query(function (res) {
