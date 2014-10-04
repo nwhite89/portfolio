@@ -68,7 +68,7 @@ module.exports = function (grunt) {
             options: {
                 includePaths: [
                     'vendor/bootstrap-sass-official/assets/stylesheets'
-                ].concat(require('bourbon').includePaths)
+                ].concat(require('node-bourbon').includePaths)
             },
             dist: {
                 files: {
