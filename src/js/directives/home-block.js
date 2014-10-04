@@ -1,6 +1,6 @@
 angular
     .module('app.directives')
-    .directive('home-block', function () {
+    .directive('homeBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,

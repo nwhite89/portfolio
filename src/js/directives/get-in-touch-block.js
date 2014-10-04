@@ -1,6 +1,6 @@
 angular
     .module('app.directives')
-    .directive('getintouchblock', function () {
+    .directive('getInTouchBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,

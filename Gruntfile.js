@@ -44,6 +44,7 @@ module.exports = function (grunt) {
             },
             src: [
                 '**/*.js',
+                '!vendor/**',
                 '!node_modules/**'
             ]
         },
@@ -53,10 +54,12 @@ module.exports = function (grunt) {
             },
             src: [
                 '**/*.js',
+                '!vendor/**',
                 '!node_modules/**'
             ],
             json: [
                 '**/*.json',
+                '!vendor/**',
                 '!node_modules/**'
             ]
         },
@@ -70,6 +73,17 @@ module.exports = function (grunt) {
                 files: {
                     'www/main.css': 'src/sass/template.scss'
                 }
+            }
+        },
+        watch: {
+            dev: {
+                files: [
+                    'src/**/*.js',
+                    'src/**/*.html'
+                ],
+                tasks: [
+                    'build'
+                ]
             }
         }
     });
@@ -93,7 +107,12 @@ module.exports = function (grunt) {
 
     grunt.registerTask('serve', [
         'build',
-        'connect:server:keepalive'
+        'connect:server'
+    ]);
+
+    grunt.registerTask('dev', [
+        'serve',
+        'watch'
     ]);
 
     // Test task, to run tests for the project
@@ -102,6 +121,6 @@ module.exports = function (grunt) {
     // Grunt default taske (run linting first then set up serve)
     grunt.registerTask('default', [
         'lint',
-        'serve'
+        'dev'
     ]);
 };

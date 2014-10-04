@@ -13,11 +13,17 @@
     <script src="app.js"></script>
 </head>
 <body ng-app="app">
-    <navblock></navblock>
-    <homeblock></homeblock>
-    <getintouchblock></getintouchblock>
+    <nav-block></nav-block>
+    <home-block></home-block>
+    <div ng-controller="about">
+        <about-block></about-block>
+    </div>
+    <div ng-controller="portfolio">
+        <portfolio-block></portfolio-block>
+    </div>
+    <get-in-touch-block></get-in-touch-block>
     <div ng-controller="footer">
-        <footerblock></footerblock>
+        <footer-block></footer-block>
     </div>
 </body>
 </html>

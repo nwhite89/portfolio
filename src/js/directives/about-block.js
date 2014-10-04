@@ -1,6 +1,6 @@
 angular
     .module('app.directives')
-    .directive('about-block', function () {
+    .directive('aboutBlock', function () {
         return {
             'restrict': 'E',
             'replace': true,
