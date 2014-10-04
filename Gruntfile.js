@@ -59,6 +59,13 @@ module.exports = function (grunt) {
                 '**/*.json',
                 '!node_modules/**'
             ]
+        },
+        sass: {
+            dist: {
+                files: {
+                    'main.css': 'main.scss'
+                }
+            }
         }
     });
 
