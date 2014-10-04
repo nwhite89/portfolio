@@ -397,12 +397,18 @@ section {
         }
 
         ul {
-            /* @include horizontal-list(10px, left); */
-
-            width: 350px;
+            width: 100%;
             margin: 0 auto;
 
             &.icons {
+                padding: 0;
+                list-style-type: none;
+                text-align: center;
+
+                li {
+                    display: inline;
+                }
+
                 a {
                     border: none;
 

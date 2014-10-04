@@ -29,6 +29,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jscs": "~0.7.1",
     "grunt-sass": "~0.14.2",
-    "load-grunt-tasks": "~0.6.0"
+    "load-grunt-tasks": "~0.6.0",
+    "node-bourbon": "~1.2.3"
   }
 }
