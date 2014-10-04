@@ -42,6 +42,16 @@ module.exports = function (grunt) {
                 expand: true
             }
         },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/',
+                    src: ['img/projects/**/*.{png,jpg,gif}'],
+                    dest: 'www/'
+                }]
+            }
+        },
         jscs: {
             options: {
                 config: '.jscsrc'
