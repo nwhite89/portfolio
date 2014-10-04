@@ -5,6 +5,10 @@ module.exports = function (grunt) {
         concat: {
             dev: {
                 src: [
+                    'vendor/angular/angular.js',
+                    'vendor/angular-resource/angular-resource.js',
+                    'vendor/angular-sanitize/angular-sanitize.js',
+                    'vendor/ng-lodash/build/ng-lodash.js',
                     'src/js/*.js',
                     'src/js/**/*-setup.js',
                     'src/**/*.js'

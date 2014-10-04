@@ -18,6 +18,10 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "bootstrap-sass-official": "~3.2.0"
+    "bootstrap-sass-official": "~3.2.0",
+    "ng-lodash": "~0.0.2",
+    "angular": "~1.2.26",
+    "angular-resource": "~1.2.26",
+    "angular-sanitize": "~1.2.26"
   }
 }
